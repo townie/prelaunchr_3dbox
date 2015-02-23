@@ -44,10 +44,10 @@ html.home{
 }
 
 #home .hero{
-	width: 100%;
-	height: 446px;
-	background: url(/assets/home/cool3.png) center center no-repeat;
-	background-size: 1600px 446px;
+	width: 90%;
+	height: 646px;
+	background: url(/assets/home/heartbox2@2x.jpg) center center no-repeat;
+	background-size: 1500px 546px;
 	overflow: hidden;
 	position: relative;
 	letter-spacing: .09em;
@@ -631,8 +631,8 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 	#home .hero{
-		background: url(/assets/home/hero@2x.jpg) center center no-repeat;
-		background-size: 1600px 446px;
+		background: url(/assets/home/heartbox2@2x.jpg) center center no-repeat;
+		background-size: 1600px 546px;
 	}
 
 	#home .form-wrap .key{
@@ -641,7 +641,7 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 
 	#refer .header .logo{
-		background: url(/assets/refer/logo@2x.png) 0 0 no-repeat;
+		background: url(/assets/refer/logo.png) 0 0 no-repeat;
 		background-size: 106px 19px;
 	}
 
