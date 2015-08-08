@@ -4,7 +4,7 @@ Prelaunchr::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  root :to => "users#new"
+  root :to => "users#landing"
 
   match 'users/create' => 'users#create'
 
