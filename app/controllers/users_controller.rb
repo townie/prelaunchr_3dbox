@@ -1,21 +1,24 @@
 class UsersController < ApplicationController
     before_filter :skip_first_page, :only => :new
+    layout :resolve_layout
 
     def new
-        @bodyId = 'home'
-        @is_mobile = mobile_device?
-
-        @user = User.new
+      respond_to_new
 
         respond_to do |format|
             format.html # new.html.erb
         end
     end
 
+    def landing
+      respond_to_new
+      render file: "app/views/users/landing.html.erb"
+    end
+
     def create
         # Get user to see if they have already signed up
         @user = User.find_by_email(params[:user][:email]);
-            
+
         # If user doesnt exist, make them, and attach referrer
         if @user.nil?
 
@@ -81,14 +84,31 @@ class UsersController < ApplicationController
     end
 
     def policy
-          
-    end  
+
+    end
 
     def redirect
         redirect_to root_path, :status => 404
     end
 
-    private 
+    private
+
+    def respond_to_new
+        @bodyId = 'home'
+        @is_mobile = mobile_device?
+
+        @user = User.new
+    end
+
+    def resolve_layout
+      case action_name
+      when "landing"
+        "none"
+      else
+        "application"
+      end
+    end
+
 
     def skip_first_page
         if !Rails.application.config.ended
