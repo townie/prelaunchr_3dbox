@@ -9,7 +9,8 @@ group :development, :production, :test do
 end
 
 gem 'activeadmin'
-
+gem "font-awesome-rails"
+gem 'inline_svg'
 
 # Gems used only for assets and not required
 # in production environments by default.
