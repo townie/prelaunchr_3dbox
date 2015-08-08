@@ -53,18 +53,23 @@
               <p>Making and delivering<br />
               the best 3d printed<br />
               items, Every month.</p>
-              <form method="post" action="#">
-                <div class="6u$">
-                  <!-- <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" /> -->
-                </div>
-                <div class="12u$">
-                  <ul class="actions">
-                    <li><input type="submit" value="Join the future" class="special" /></li>
-                  </ul>
-                </div>
 
-              </form>
 
+              <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
+                  <% if Rails.application.config.ended %>
+                      <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
+                      <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
+                      <p class="go-to brandon">In the meantime, head to  <a href="http://www.3dbox.club/">WWW.3DBOX.CLUB</a></p>
+                      <p class="again brandon">Thank You Again!</p>
+                  <% else %>
+                      <div class="key 12$u"></div>
+                      <%= form_for @user, :url => { :action => "create" } do |f| %>
+                          <%= f.text_field :email, :placeholder => "Enter Email", :class => "align-center " %>
+                          <input class="special" name="commit" type="submit" value="Request Early Access" />
+                      <% end %>
+                  <% end %>
+              </div>
+            </div>
 
             </div>
             <a href="#one" class="more scrolly">Learn More</a>
