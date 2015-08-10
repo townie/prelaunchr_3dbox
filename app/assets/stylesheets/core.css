@@ -307,9 +307,9 @@ html.home{
 }
 
 #refer .mammoth{
-	width: 612px;
-	height: 394px;
-	background: url(/assets/refer/mammoth.png) 0 0 no-repeat;
+	width: 600px;
+	height: 600px;
+	background: url(/assets/gear_ball_spin.gif) 0 0 no-repeat;
 	background-size: 610px 394px;
 	overflow: hidden;
 	margin-top: 15px;
@@ -317,7 +317,7 @@ html.home{
 }
 
 #refer .mammoth .need{
-	color: #FFF;
+	color: #000000;
 	font-size: 38px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -646,7 +646,7 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 
 	#refer .mammoth{
-		background: url(/assets/refer/mammoth@2x.png) 0 0 no-repeat;
+		background: url(/assets/refer/coolthing2.png 0 0 no-repeat;
 		background-size: 610px 394px;
 	}
 

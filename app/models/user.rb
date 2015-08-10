@@ -37,6 +37,10 @@ class User < ActiveRecord::Base
         }
     ]
 
+    def email_test
+        UserMailer.basic_email(self)
+    end
+
     private
 
     def create_referral_code
@@ -52,6 +56,6 @@ class User < ActiveRecord::Base
     end
 
     def send_welcome_email
-        UserMailer.delay.signup_email(self)
+        UserMailer.delay.basic_email(self)
     end
 end
