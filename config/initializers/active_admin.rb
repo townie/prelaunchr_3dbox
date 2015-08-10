@@ -150,3 +150,7 @@ ActiveAdmin.setup do |config|
   # Set the CSV builder options (default is {})
   # config.csv_options = {}
 end
+
+ActiveAdmin.after_load do
+  I18n.reload!
+end
