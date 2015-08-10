@@ -37,6 +37,10 @@ class User < ActiveRecord::Base
         }
     ]
 
+    def email_test
+        UserMailer.basic_email(self)
+    end
+
     private
 
     def create_referral_code

@@ -794,7 +794,7 @@ body.outlook p {
                         <table class="twelve columns">
                           <tr>
                             <td class="six sub-columns">
-                              <img src="http://placehold.it/200x50">
+                              <img src="<%= Rails.application.config.action_mailer.default_url_options %>/assets/email/logo.png">
                             </td>
                             <td class="six sub-columns last" style="text-align:right; vertical-align:middle;">
                               <span class="template-label">3dbox.club</span>
@@ -845,11 +845,7 @@ body.outlook p {
                         <tr>
                           <td class="panel">
                             <p>Share this link and earn rewards for each of each of your friends and family that sign up
-                             <a href="#">Click it! »</a></p>
-
-                            <center>
-                                <a href="<%= Rails.application.config.action_mailer.default_url_options || "" %>?ref=<%= @user.referral_code %>" style="font-family: 'Times', serif; font-size: 14px; letter-spacing: 0.05em; color: #6c6c6c; text-decoration: none" target="_blank"><%= Rails.application.config.action_mailer.default_url_options || "" %>?ref=<%= @user.referral_code %></a>
-                            </center>
+                             <a href="<%= Rails.application.config.action_mailer.default_url_options || "" %>?ref=<%= @user.referral_code %>">Click it! »</a></p>
                           </td>
                           <td class="expander"></td>
                         </tr>
