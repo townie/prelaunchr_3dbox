@@ -646,7 +646,7 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 
 	#refer .mammoth{
-		background: url(/assets/refer/coolthing2.png 0 0 no-repeat;
+		background: url(/assets/refer/coolthing2.png) 0 0 no-repeat;
 		background-size: 610px 394px;
 	}
 
