@@ -36,8 +36,9 @@ class User < ActiveRecord::Base
             "image" => ActionController::Base.helpers.asset_path("refer/reward50.png")
         }
     ]
-  def test
-        UserMailer.basic_email(self)
+
+    def test
+        UserMailer.signup_email(self)
     end
 
     private

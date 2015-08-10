@@ -43,6 +43,7 @@ Prelaunchr::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  config.action_mailer.default_url_options = { :host => 'www.3dbox.club' }
 
   # For mailer configs
   config.action_mailer.perform_deliveries = true
