@@ -13,15 +13,15 @@ class User < ActiveRecord::Base
     REFERRAL_STEPS = [
         {
             'count' => 5,
-            "html" => "Tube<br>Squzer",
+            "html" => "Headphones<br>Detangler",
             "class" => "two",
-            "image" =>  ActionController::Base.helpers.asset_path("refer/tube.jpg")
+            "image" =>  ActionController::Base.helpers.asset_path("refer/headphones.jpg")
         },
         {
             'count' => 10,
-            "html" => "Bag<br>Carrier",
+            "html" => "Complete<br>Wired Collection",
             "class" => "three",
-            "image" => ActionController::Base.helpers.asset_path("refer/bagholder.jpg")
+            "image" => ActionController::Base.helpers.asset_path("useful2.png")
         },
         {
             'count' => 25,
@@ -31,13 +31,12 @@ class User < ActiveRecord::Base
         },
         {
             'count' => 50,
-            "html" => "Thinking<br>Trooper",
+            "html" => "Pen<br>Tree",
             "class" => "five",
-            "image" => ActionController::Base.helpers.asset_path("refer/thinking_trooper.jpg")
+            "image" => ActionController::Base.helpers.asset_path("refer/reward50.png")
         }
     ]
-
-    def email_test
+  def test
         UserMailer.basic_email(self)
     end
 
@@ -56,6 +55,6 @@ class User < ActiveRecord::Base
     end
 
     def send_welcome_email
-        UserMailer.delay.basic_email(self)
+        UserMailer.delay.sign_email(self)
     end
 end
