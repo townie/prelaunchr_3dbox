@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <!--
-  3dbox.club by HTML5 UP
+  3Dbox.club by HTML5 UP
   html5up.net | @n33co
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
   <head>
-    <title>3dbox.club</title>
+    <title>3Dbox.club</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -14,7 +14,7 @@
         <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
         <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
 
-        <meta property="og:title" content="3Dbox.club’s is coming!"/>
+        <meta property="og:title" content="3Dbox.club Great 3D items every month"/>
 
     <%= stylesheet_link_tag "main.css", :media => "all" %>
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -38,7 +38,7 @@
 
         <!-- Header -->
           <header id="header" class="alt">
-            <h1><a href="index.html">3dbox.club</a></h1>
+            <h1><a href="index.html">3Dbox.club</a></h1>
             <nav id="nav">
               <ul>
                 <li class="special">
@@ -58,9 +58,9 @@
         <!-- Banner -->
           <section id="banner">
             <div class="inner">
-              <h2>3dbox.club</h2>
+              <h2>3Dbox.club</h2>
               <p>Making and delivering<br />
-              the best 3d printed<br />
+              the best 3D printed<br />
               items, Every month.</p>
 
 
@@ -68,13 +68,13 @@
                   <% if Rails.application.config.ended %>
                       <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
                       <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
-                      <p class="go-to brandon">In the meantime, head to  <a href="http://www.3dbox.club/">WWW.3DBOX.CLUB</a></p>
+                      <p class="go-to brandon">In the meantime, head to  <a href="http://www.3Dbox.club/">WWW.3DBOX.CLUB</a></p>
                       <p class="again brandon">Thank You Again!</p>
                   <% else %>
                       <div class="key 12$u"></div>
                       <%= form_for @user, :url => { :action => "create" } do |f| %>
                           <%= f.text_field :email, :placeholder => "Enter Email", :class => "align-center " %>
-                          <input class="special" name="commit" type="submit" value="Get free 3D prints" />
+                          <input class="special" name="commit" type="submit" value="Join Waiting List" />
                       <% end %>
                   <% end %>
               </div>
@@ -105,24 +105,46 @@
             <section class="spotlight">
               <div class="image"><img src=<%= "#{image_path('useful3.png')}"%> alt="" /></div><div class="content">
                 <h2>Useful<br /> Innovation</h2>
-                <p> Lets make our lives just a little tiny bit easier.
-              Each month we pick a themes from the kitchen, wires/cords, car, bedroom and any where you might spend time to make your life a little easier.</p>
+                <p>
+              We seek to give you back a few minutes back to you everyday by finding and building things that help keep you organized and happy. We want to solve everyday problems: no more lost keys, keep your earbuds tangle free, or any other simple challenge you should never have again.
+              <br/>
+              <br/>
+              <strong>Lets Make Life A Little More Innovative</strong>
+              <br />
+              </p>
               </div>
             </section>
             <section class="spotlight">
               <div class="image"><img src=<%= "#{image_path('fun.png')}"%> alt="" /></div><div class="content">
                 <h2>Seriously<br />
-                fun</h2>
-                <p>What do ninja stars, puzzles, flowers, stick figures, leaf prints, anime ghost and horns all have in common?
+                Fun</h2>
+                <p>
 
-                The are random cool things that you could get in a monthly box! Its all about having fun.</p>
+                Brighten your day with some adorable bears, assemble a 4 inch motorcyle, wear some shamrock glasses or what ever whacky crazy fun thing we can make for you.
+
+                They can be enjoyed alone or together with friends or family.
+                <br />
+                <br />
+                <strong>We do the hard work of finding you the fun, you get to just have fun.</strong>
+
+
+                </p>
               </div>
             </section>
             <section class="spotlight">
               <div class="image"><img src=<%= "#{image_path('package.png')}"%> alt="" /></div><div class="content">
                 <h2>Adventure<br />
                 Every month</h2>
-                <p>We work hard for you to find the coolest things out there and give you a great experience when you open your 3dbox!</p>
+                <p>We work hard for you to find the coolest things out there and give you a great experience when you open your 3Dbox!
+                <br/>
+                <br/>
+                Expect:
+                <br/>
+                <code>3-5 Useful Innovations</code><br/>
+                <code>2-4 Seriously Funs</code>
+
+
+                </p>
               </div>
             </section>
           </section>
@@ -142,7 +164,7 @@
                 </li>
                 <li class="icon fa-gift">
                   <h3>Receive</h3>
-                  <p>Earn rewards as your referral sign up. Ranging from small items to free months of the box club.</p>
+                  <p>Earn rewards as your referrals sign up for our waiting list</p>
                 </li>
 
               </ul>
@@ -159,7 +181,7 @@
                     <input type="email" name="user[email]" id="demo-email" value="" placeholder="email" />
                   </div>
                   <div class="6u 12u$(xsmall)">
-                    <input class="special" name="commit" type="submit" value="Get free 3D prints" />
+                    <input class="special" name="commit" type="submit" value="Get Free 3d Prints" />
                   </div>
               </form>
               </div>
@@ -176,13 +198,13 @@
         <!-- Footer -->
           <footer id="footer">
             <ul class="icons">
-              <li><a href="http://twitter.com/3dboxclub" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-              <li><a href="http://facebook.com/3dboxclub" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-              <li><a href="https://instagram.com/3dbox.club/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-              <li><a href="mailto:info@3dbox.club" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+              <li><a href="http://twitter.com/3Dboxclub" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+              <li><a href="http://facebook.com/3Dboxclub" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+              <li><a href="https://instagram.com/3Dbox.club/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+              <li><a href="mailto:info@3Dbox.club" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
             </ul>
             <ul class="copyright">
-              <li>&copy; 3dbox.club</li>
+              <li>&copy; 3Dbox.club</li>
             </ul>
           </footer>
 

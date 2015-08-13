@@ -2,6 +2,8 @@ class UserMailer < ActionMailer::Base
     default from: "3dbox.club <info@3dbox.club>"
 
     def signup_email(user)
+        attachments.inline['Logo.png']=File.read( Rails.root.join("public", "Logo.png"))
+
         @user = user
         @twitter_message = "Get the lastest #3dprints from @3dboxclub. Excited for launch!"
 

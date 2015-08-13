@@ -15,7 +15,7 @@
             <p class="title brandon">INVITE FRIENDS &<br>Earn 3d Prints</p>
             <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter and earn cool 3d printed things for<br>each friend who signs up.</p>
             <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-            <% twitter_message = "#3dprinting is evolving. Excited for @3DBoxClub to launch." %>
+            <% twitter_message = "Looking forward to getting some free 3d prints from @3DBoxClub. #3DPrintingEveryMonth." %>
             <div class="social-links">
                 <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=3dBoxClub" class="fb" target="_blank"></a>
                 <div class="sep"></div>
