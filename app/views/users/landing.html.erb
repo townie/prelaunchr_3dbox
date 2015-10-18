@@ -67,8 +67,8 @@
               <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
                   <% if Rails.application.config.ended %>
                       <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
-                      <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
-                      <p class="go-to brandon">In the meantime, head to  <a href="http://www.3Dbox.club/">WWW.3DBOX.CLUB</a></p>
+                      <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT COUPLE OF DAYS</p>
+                      <p class="go-to brandon">In the meantime, head to  <a href="http://store.3Dbox.club/">STORE.3DBOX.CLUB</a></p>
                       <p class="again brandon">Thank You Again!</p>
                   <% else %>
                       <div class="key 12$u"></div>
@@ -175,15 +175,20 @@
           <section id="cta" class="wrapper style4">
             <div class="inner">
               <div>
-              <form method="post" action="/users/create">
-                <div class="row uniform">
-                  <div class="6u 12u$(xsmall)">
-                    <input type="email" name="user[email]" id="demo-email" value="" placeholder="email" />
-                  </div>
-                  <div class="6u 12u$(xsmall)">
-                    <input class="special" name="commit" type="submit" value="Get Free 3d Prints" />
-                  </div>
-              </form>
+             <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
+                  <% if Rails.application.config.ended %>
+                      <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
+                      <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
+                      <p class="go-to brandon">In the meantime, head to  <a href="http://www.3Dbox.club/">WWW.3DBOX.CLUB</a></p>
+                      <p class="again brandon">Thank You Again!</p>
+                  <% else %>
+                      <div class="key 12$u"></div>
+                      <%= form_for @user, :url => { :action => "create" } do |f| %>
+                          <%= f.text_field :email, :placeholder => "Enter Email", :class => "align-center " %>
+                          <input class="special" name="commit" type="submit" value="Join Waiting List" />
+                      <% end %>
+                  <% end %>
+              </div>
               </div>
               <header>
                 <h2>Earn free gifts</h2>
