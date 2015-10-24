@@ -12,6 +12,7 @@ Prelaunchr::Application.routes.draw do
 
   match 'privacy-policy' => 'users#policy'
   match 'rules' => 'users#policy'
+  match "/winner" => redirect("http://visitor.r20.constantcontact.com/manage/optin?v=0010p8SgAUuY-ecIfHMl4lAgW7tvJ7rgJ9LQXKM7anbBobr1vJScpkDeey0-XmhbnfsIzR2TAyrSVxvCpLyhisGbVghk3XyP5LJaJAgoWbZAEc%3D"), :as => :winner
   
   unless Rails.application.config.consider_all_requests_local
       match '*not_found', to: 'users#redirect', :format => false
